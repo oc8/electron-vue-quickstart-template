@@ -1,11 +1,11 @@
 <template>
-	<router-view />
-	<!-- <HomeView /> -->
+	<!-- <router-view /> -->
+	<HomeView />
 </template>
 
 <script setup lang="ts">
 import { provide } from 'vue';
-// import HomeView from './views/HomeView.vue'
+import HomeView from './views/HomeView.vue'
 
 provide('colors', {
 	color0: "#fff",

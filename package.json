@@ -1,8 +1,8 @@
 {
-  "name": "electron-vue-vite",
+  "name": "name",
   "version": "1.0.0",
   "main": "dist/main/index.cjs",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "author": "oc8",
   "license": "MIT",
   "scripts": {
     "dev": "node scripts/watch.mjs",
@@ -58,5 +58,30 @@
   },
   "dependencies": {
     "vue-router": "^4.0.15"
+  },
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "electron project",
+    "copyright": "Copyright © 2022 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "requireAdministrator",
+      "icon": "./packages/renderer/public/favicon.ico"
+    },
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron"
+    }
   }
 }
