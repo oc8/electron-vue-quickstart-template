@@ -1,6 +1,6 @@
 <template>
-	<!-- <router-view /> -->
-	<HomeView />
+	<router-view />
+	<!-- <HomeView /> -->
 </template>
 
 <script setup lang="ts">
